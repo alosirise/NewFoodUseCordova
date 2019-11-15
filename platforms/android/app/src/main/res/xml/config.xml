@@ -15,7 +15,7 @@
         Apache Cordova Team
     </author>
     <content src="index.html" />
-    <icon src="www/de1.jpg" />
+    <icon src="www/menu5.jpg" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
