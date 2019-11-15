@@ -1,0 +1,57 @@
+<ons-page id="registerpage">
+    <div>
+        <br><br>
+    </div>
+
+    <ons-card>
+        <div style="text-align: center; margin-top: 30px;">
+            <i class="fas fa-user-plus fa-3x "></i><br><br>
+            <p>
+                <ons-input id="email" modifier="underbar" placeholder="Email" float></ons-input>
+            </p>
+            <p>
+                <ons-input id="password" modifier="underbar" type="password" placeholder="Password" float></ons-input>
+            </p>
+            <p>
+                <ons-input id="confirmpassword" modifier="underbar" type="password" placeholder="Confirm password"
+                    float></ons-input>
+            </p>
+            <p>
+                <ons-input id="phonenumber" modifier="underbar" placeholder="Phone number" float></ons-input>
+            </p>
+
+            <div style="text-align: center; margin-top: 30px;">
+                <label class="radio-button radio-button--material">
+                    <input type="radio" class="radio-button__input radio-button--material__input" name="r"
+                        checked="checked">
+                    <div class="radio-button__checkmark radio-button--material__checkmark"></div>
+                    Male
+                </label>
+                <label class="radio-button radio-button--material">
+                    <input type="radio" class="radio-button__input radio-button--material__input" name="r">
+                    <div class="radio-button__checkmark radio-button--material__checkmark"></div>
+                    Female
+                </label>
+            </div>
+
+            <p style="margin-top: 35px;">
+
+                <ons-button style="background-color : rgb(206, 140, 17)" id="register">Create an Account!
+                </ons-button><br><br>
+                or <br><br>
+                <ons-button style="background-color : rgb(28, 133, 219)" id="gobacklogin">
+                    Back</ons-button><br><br>
+
+        </div>
+    </ons-card>
+
+    <style>
+        .page__background {
+            background-image: url("de4.jpg");
+        }
+
+        body {
+            background-color: powderblue;
+        }
+    </style>
+</ons-page>

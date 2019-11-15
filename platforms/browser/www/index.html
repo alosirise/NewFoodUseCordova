@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Food</title>
+
+  <script src="onsen/js/onsenui.min.js"></script>
+  <script src="https://unpkg.com/jquery/dist/jquery.min.js"></script>
+  <script src="onsen/js/onsenui.js"></script>
+  <!-- <script src="https://maps.googleapis.com/maps/api/js?key=Your_API_Key"></script> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule="" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"></script>
+  <link rel="stylesheet" href="onsen/css/onsen-css-components.css">
+  <link rel="stylesheet" href="onsen/css/onsenui.css">
+
+  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.js'></script>
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.css' rel='stylesheet' />
+
+  <link rel="manifest" href="/manifest.json">
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/service-worker.js')
+          .then((reg) => {
+            console.log('Service worker registered.', reg);
+          });
+      });
+    }
+
+    //cordova
+    document.addEventListener("deviceready", onDeviceReady, false);
+    function onDeviceReady() {
+      console.log("navigator.geolocation works well");
+    }
+
+
+  </script>
+</head>
+
+<body>
+  <ons-navigator id="myNavigator" page="splitter.html">
+  </ons-navigator>
+  <ons-toolbar>
+    <div class="left">
+      <ons-toolbar-button>
+        <ion-icon style=" margin-top: 6px;" size="large" id="menubtn" name="contact"></ion-icon>
+      </ons-toolbar-button>
+    </div>
+    <div class="toolbar__center" id="toolbar">
+
+    </div>
+    <div class="right">
+      <ons-toolbar-button>
+        <ion-icon style=" margin-top: 6px;" size="large" id="cartbtn" name="cart"></ion-icon>
+      </ons-toolbar-button>
+    </div>
+
+  </ons-toolbar>
+
+  <template id="splitter.html">
+    <ons-page>
+      <ons-splitter id="mySplitter">
+        <ons-splitter-side id="sidemenu" page="menu.html" swipeable width="250px" collapse swipe-target-width="50px">
+        </ons-splitter-side>
+        <ons-splitter-content page="home.html" id="content">
+        </ons-splitter-content>
+      </ons-splitter>
+    </ons-page>
+  </template>
+
+
+  <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-app.js"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-firestore.js"></script>
+  <!-- <script src="cordova.js"></script> -->
+  <script src="app.js"></script>
+</body>
+
+</html>

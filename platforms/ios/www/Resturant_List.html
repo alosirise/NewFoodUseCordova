@@ -1,0 +1,77 @@
+<ons-page id='resturantpage'>
+
+    <div>
+        <br><br>
+    </div>
+
+    <br>
+    <p style="text-align: center; margin-top: 10px;">
+        <ons-search-input placeholder="Search" onchange="ons.notification.alert('Searched for: ' + this.value)">
+        </ons-search-input>
+    </p><br>
+
+    <ons-row>
+        <ons-col id="foodlist" ></ons-col>
+    </ons-row>
+
+    <script src="onsen/js/onsenui.min.js"></script>
+    <script src="https://unpkg.com/jquery/dist/jquery.min.js"></script>
+
+    <script src="onsen/js/onsenui.js"></script>
+    <link rel="stylesheet" href="onsen/css/onsen-css-components.css">
+    <link rel="stylesheet" href="onsen/css/onsenui.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style type="text/css">
+        .page__background {
+            background-image: url("de4.jpg");
+        }
+   
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .column {
+            float: left;
+            width: 25%;
+            padding: 0 10px;
+        }
+
+        .row {
+            margin: 0 -5px;
+        }
+
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+            padding: 16px;
+            text-align: center;
+            background-color: #6b6b6b91;
+        }
+
+        @media screen and (max-width: 600px) {
+            .column {
+                width: 100%;
+                display: block;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</ons-page>
